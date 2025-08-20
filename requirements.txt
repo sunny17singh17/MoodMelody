@@ -1,0 +1,9 @@
+spotipy==2.24.0
+numpy==1.25.2
+tensorflow==2.15.0
+nltk==3.8.1
+streamlit==1.36.0
+scikit-learn==1.2.2
+pandas==2.0.3
+psutil==5.9.5
+torch
