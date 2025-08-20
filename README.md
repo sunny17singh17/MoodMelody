@@ -2,17 +2,20 @@
 Understand Your Mood, Find Your Music
 MoodMelody is an AI-powered music recommender that bridges the gap between your emotions and the perfect soundtrack. Built for those moments when you just can't decide what to play, the app uses Natural Language Processing (NLP) and a lightweight BiLSTM classifier to understand your feelings and suggest music to match.
 
-# How It Works: A Technical Overview
+# How It Works: A Technical Overview 
 The core of MoodMelody is a simple yet powerful workflow: Text → Mood → Music.
 
 1. Text to Mood Prediction
 You start by typing a thought or feeling into the app. The system then processes this text through a series of steps:
 
-# Preprocessing: The text is cleaned, lowercased, and tokenized.
+# Preprocessing: 
+The text is cleaned, lowercased, and tokenized.
 
-# Embedding: Pre-trained GloVe word embeddings convert your words into dense numerical vectors, helping the model understand their meaning.
+# Embedding: 
+Pre-trained GloVe word embeddings convert your words into dense numerical vectors, helping the model understand their meaning.
 
-# Classification: A trained BiLSTM (Bidirectional Long Short-Term Memory) model analyzes these vectors to predict the underlying mood or emotion. This model is intentionally small to ensure a fast, "snappy" user experience.
+# Classification: 
+A trained BiLSTM (Bidirectional Long Short-Term Memory) model analyzes these vectors to predict the underlying mood or emotion. This model is intentionally small to ensure a fast, "snappy" user experience.
 
 #  Mood to Music Recommendation
 Once a mood is identified, the app connects to the Spotify Web API using the Spotipy library.
@@ -41,13 +44,3 @@ Seamless Integration: Utilizes the Spotify API with secure OAuth authentication 
 
 Lightweight and Fast: The model and deployment on Streamlit ensure the app is responsive and easy to use.
 
-Project Structure
-The repository is organized to be clear and easy to navigate:
-
-moodmelody/
-├── app.py                         # The main Streamlit application file
-├── moodmelody_final_code.ipynb    # Jupyter notebook with project experiments
-├── saved_models/                  # Directory for the trained classifier model
-├── nltk_data/                     # Local storage for NLP resources
-├── test.py                        # Script for testing different components
-└── requirements.txt               # List of Python dependencies
